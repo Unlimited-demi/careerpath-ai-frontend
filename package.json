@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.7.9",
     "frontend": "file:",
     "pdf-parse": "^1.1.1",
     "pinia": "^2.3.0",
