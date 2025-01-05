@@ -2,7 +2,7 @@
   <!-- Main container -->
   <div class="bg-gray-50 min-h-screen flex flex-col">
     <!-- Navigation Bar -->
-    <header class="bg-white shadow h-16 flex items-center justify-between px-6">
+    <!-- <header class="bg-white shadow h-16 flex items-center justify-between px-6">
       <div class="text-2xl font-bold text-gray-800">
         CareerPath AI
       </div>
@@ -12,13 +12,13 @@
             <router-link to="/" class="text-gray-600 hover:text-gray-900 font-medium">
               Home
             </router-link>
-          </li>
+          </li> -->
           <!-- Potential extra links -->
           <!-- <li><router-link to="/about">About</router-link></li> -->
           <!-- <li><router-link to="/features">Features</router-link></li> -->
-        </ul>
+        <!-- </ul>
       </nav>
-    </header>
+    </header> -->
 
     <!-- Hero Section -->
     <section class="flex-grow flex flex-col items-center justify-center p-8">

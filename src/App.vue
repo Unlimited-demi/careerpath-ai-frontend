@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h1 
+    <h1  
       class="text-4xl font-bold text-center py-4 bg-blue-500 text-white sticky top-0 z-10 shadow-md">
-        CareerPath AI
+       <a href="/" >CareerPath AI</a>
     </h1>
     <router-view></router-view>
   </div>
