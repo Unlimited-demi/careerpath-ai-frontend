@@ -22,6 +22,22 @@
       <p class="text-sm text-gray-500">or click to select a file (PDF, DOC, DOCX)</p>
     </div>
 
+    <div class="bg-white rounded-lg shadow p-4 mb-6">
+      <h3 class="text-xl font-semibold mb-2 text-gray-800">How to Use</h3>
+      <p class="text-gray-600 mb-2">
+        1. Choose a PDF, DOC, or DOCX resume file.
+      </p>
+      <p class="text-gray-600 mb-2">
+        2. Click "Upload Resume" to securely process your file.
+      </p>
+      <p class="text-gray-600 mb-2">
+        3. Set your career goal to personalize your recommendations.
+      </p>
+      <p class="text-gray-600">
+        4. View skill gaps, strengths, and curated learning paths on your Profile page.
+      </p>
+    </div>
+
     <div v-if="file" class="mb-6">
       <p class="text-sm text-gray-600">Selected file: {{ file.name }}</p>
       <div class="mt-2 flex items-center">

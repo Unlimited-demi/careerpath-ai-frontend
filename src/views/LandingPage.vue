@@ -2,23 +2,7 @@
   <!-- Main container -->
   <div class="bg-gray-50 min-h-screen flex flex-col">
     <!-- Navigation Bar -->
-    <!-- <header class="bg-white shadow h-16 flex items-center justify-between px-6">
-      <div class="text-2xl font-bold text-gray-800">
-        CareerPath AI
-      </div>
-      <nav>
-        <ul class="flex space-x-4">
-          <li>
-            <router-link to="/" class="text-gray-600 hover:text-gray-900 font-medium">
-              Home
-            </router-link>
-          </li> -->
-          <!-- Potential extra links -->
-          <!-- <li><router-link to="/about">About</router-link></li> -->
-          <!-- <li><router-link to="/features">Features</router-link></li> -->
-        <!-- </ul>
-      </nav>
-    </header> -->
+    
 
     <!-- Hero Section -->
     <section class="flex-grow flex flex-col items-center justify-center p-8">
@@ -207,3 +191,36 @@
 </script>
 
 
+<style scoped>
+/* Main container styling */
+.moving-dots {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+  animation: move-dots 8s linear infinite, sparkle 4s infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes move-dots {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-30px, -30px);
+  }
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+</style>
