@@ -1,6 +1,9 @@
 <template>
-    <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-96">
-      <h2 class="text-2xl font-bold mb-4">Feedback</h2>
+    <div class="bg-white rounded-lg shadow p-6 mb-4">
+      <h2 class="text-2xl font-bold text-gray-800 mb-2">User Feedback</h2>
+      <p class="text-gray-600 mb-4">
+        We value your input and suggestions to improve our service.
+      </p>
       <form @submit.prevent="submitFeedback">
         <div class="mb-4">
           <label class="block text-gray-700 text-sm font-bold mb-2" for="rating">
@@ -51,4 +54,3 @@
     }
   };
   </script>
-  

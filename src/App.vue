@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app-container">
     <header class="bg-white shadow h-16 flex items-center justify-between px-6">
       <div class="flex items-center">
         <a href="/" class="flex items-center">

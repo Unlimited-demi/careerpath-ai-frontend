@@ -17,7 +17,7 @@
         </ul>
         <template v-if="skillGaps.length > 0">
           <p class="mt-2">
-            <span class="font-bold">Potential skill gaps:</span>
+            <span class="font-bold">Potential skill gaps in Respect to your goal:</span>
           </p>
           <ul class="list-disc list-inside">
             <li v-for="(gap, index) in skillGaps" :key="index">

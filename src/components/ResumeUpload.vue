@@ -87,10 +87,10 @@
     </div>
 
     <button 
-      v-if="resumeUploaded && goalSubmitted" >
-      <div class="mb-4">
-        <router-link to="/profile" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Go To Profile</router-link>
-    </div>
+      v-if="resumeUploaded && goalSubmitted"
+      class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300"
+    >
+      <router-link to="/profile" class="block w-full text-center">View Your Recommendations</router-link>
     </button>
   </div>
 </template>
@@ -193,6 +193,12 @@ const submitCareerGoal = async () => {
     };
   }
 };
+if (goalSubmitted.value) {
+  const goToProfile = () => {
+    // Navigate to the user's profile page (e.g., using Vue Router)
+    userStore.router.push('/profile');
+  };
+}
 
 const goToProfile = () => {
   // Navigate to the user's profile page (e.g., using Vue Router)
