@@ -1,3 +1,7 @@
+
+
+
+
 <template>
   <!-- Main container -->
   <div class="bg-gray-50 min-h-screen flex flex-col">
@@ -5,16 +9,16 @@
     <section class="flex-grow flex flex-col items-center justify-center p-8">
       <div class="max-w-4xl text-center">
         <h1 class="text-5xl font-extrabold text-gray-800 mb-6">
-          Feeling Lost in Your Career Transition? We’ve Got Your Back.
+          Your Personalized Career Roadmap
         </h1>
         <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-          Switching to tech or changing careers can feel overwhelming. Endless courses, conflicting advice, and no clear direction leave you stuck. CareerPath AI cuts through the noise. We analyze your skills, pinpoint exactly what you need to learn, and give you a step-by-step roadmap to land your dream job.
+          Whether you’re starting fresh, switching careers, or aiming higher, CareerPath AI helps you identify your strengths, uncover skill gaps, and create a step-by-step plan to achieve your career goals. Upload your resume or describe your experience, and we’ll guide you to success.
         </p>
         <router-link
           to="/home"
           class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-bold transition duration-300"
         >
-          Get Your Personalized Roadmap
+          Get Started Now
         </router-link>
       </div>
     </section>
@@ -23,7 +27,7 @@
     <section class="bg-gray-100 py-12">
       <div class="max-w-5xl mx-auto px-4">
         <h2 class="text-3xl font-semibold text-center text-gray-800 mb-8">
-          How CareerPath AI Solves Your Biggest Challenges
+          How CareerPath AI Works
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <!-- Feature 1 -->
@@ -31,9 +35,9 @@
             <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
-            <h3 class="font-bold text-lg text-gray-800 mb-2">No More Guessing</h3>
+            <h3 class="font-bold text-lg text-gray-800 mb-2">Tell Us About Yourself</h3>
             <p class="text-gray-600">
-              Stop wondering where to start. We analyze your skills and show you exactly what you need to learn to reach your career goals.
+              Upload your resume or describe your skills, experience, and career goals. We’ll analyze your input to create a personalized roadmap.
             </p>
           </div>
           <!-- Feature 2 -->
@@ -41,9 +45,9 @@
             <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11l7-7 7 7M5 19l7-7 7 7" />
             </svg>
-            <h3 class="font-bold text-lg text-gray-800 mb-2">Clear, Actionable Steps</h3>
+            <h3 class="font-bold text-lg text-gray-800 mb-2">Identify Your Strengths and Gaps</h3>
             <p class="text-gray-600">
-              No more aimless searching. We provide a step-by-step plan with specific courses, projects, and resources tailored to your goals.
+              We’ll highlight your strengths and pinpoint the exact skills you need to achieve your career goals.
             </p>
           </div>
           <!-- Feature 3 -->
@@ -51,9 +55,9 @@
             <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-4 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536M3 6h.01M5.636 18.364L9.172 14.828" />
             </svg>
-            <h3 class="font-bold text-lg text-gray-800 mb-2">Avoid Wasting Time</h3>
+            <h3 class="font-bold text-lg text-gray-800 mb-2">Get Actionable Recommendations</h3>
             <p class="text-gray-600">
-              Skip the trial and error. We recommend only the most relevant resources, so you can focus on what matters most.
+              Receive a step-by-step plan with specific courses, projects, and resources tailored to your goals.
             </p>
           </div>
           <!-- Feature 4 -->
@@ -61,9 +65,9 @@
             <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-4 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536M3 6h.01M5.636 18.364L9.172 14.828" />
             </svg>
-            <h3 class="font-bold text-lg text-gray-800 mb-2">Curated Learning Resources</h3>
+            <h3 class="font-bold text-lg text-gray-800 mb-2">Track Your Progress</h3>
             <p class="text-gray-600">
-              We recommend the best courses and resources from platforms like Udemy and YouTube, so you don’t have to sift through endless options.
+              Stay on track with regular updates and tips to help you achieve your career goals faster.
             </p>
           </div>
         </div>
@@ -101,34 +105,34 @@
     <section class="bg-gray-100 py-12">
       <div class="max-w-5xl mx-auto px-4">
         <h2 class="text-3xl font-semibold text-center text-gray-800 mb-8">
-          Still Unsure? Let’s Clear Things Up
+          Frequently Asked Questions
         </h2>
         <div class="space-y-4">
           <!-- FAQ 1 -->
           <details class="bg-white shadow rounded-lg p-4">
             <summary class="font-bold text-gray-800 cursor-pointer">
-              I’m completely new to tech. Can CareerPath AI help me?
+              Do I need a resume to use CareerPath AI?
             </summary>
             <p class="mt-2 text-gray-700 leading-relaxed">
-              Absolutely! Whether you’re starting from scratch or switching careers, we’ll guide you step-by-step. Just tell us your goal, and we’ll create a personalized plan to get you there.
+              No! You can either upload your resume or describe your skills, experience, and career goals. We’ll analyze your input and provide personalized recommendations.
             </p>
           </details>
           <!-- FAQ 2 -->
           <details class="bg-white shadow rounded-lg p-4">
             <summary class="font-bold text-gray-800 cursor-pointer">
-              How is this different from free online resources?
+              How does CareerPath AI identify skill gaps?
             </summary>
             <p class="mt-2 text-gray-700 leading-relaxed">
-              Free resources are great, but they can be overwhelming and hard to navigate. CareerPath AI cuts through the noise by giving you a clear, personalized roadmap with only the most relevant resources.
+              We compare your current skills and experience with the requirements of your career goal. This helps us pinpoint the exact skills you need to develop.
             </p>
           </details>
           <!-- FAQ 3 -->
           <details class="bg-white shadow rounded-lg p-4">
             <summary class="font-bold text-gray-800 cursor-pointer">
-              What if I don’t know what career to aim for?
+              What kind of recommendations will I receive?
             </summary>
             <p class="mt-2 text-gray-700 leading-relaxed">
-              No problem! We’ll help you explore different career paths based on your skills and interests, so you can choose the one that’s right for you.
+              You’ll get a step-by-step plan with specific courses, projects, and resources tailored to your goals. We also provide tips and advice to help you stay on track.
             </p>
           </details>
         </div>
@@ -139,16 +143,16 @@
     <section class="py-12">
       <div class="max-w-xl mx-auto text-center">
         <h2 class="text-2xl font-semibold text-gray-800 mb-6">
-          Ready to Stop Feeling Overwhelmed?
+          Ready to Take Control of Your Career?
         </h2>
         <p class="text-gray-600 mb-8">
-          Don’t let confusion hold you back. CareerPath AI gives you the clarity and direction you need to take the next step in your career.
+          Stop feeling overwhelmed and start making progress. CareerPath AI is here to guide you every step of the way.
         </p>
         <router-link
           to="/home"
           class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-bold transition duration-300"
         >
-          Get Your Roadmap Now
+          Get Started Now
         </router-link>
       </div>
     </section>
@@ -174,4 +178,3 @@
 <style scoped>
 /* Add any custom styles here */
 </style>
-

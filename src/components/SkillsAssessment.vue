@@ -8,51 +8,47 @@
       <div class="text-red-500">Error: {{ error }}</div>
     </template>
     <template v-else>
-      <div v-if="skills.length > 0">
+      <div v-if="skills.length > 0" class="py-3">
         <p class="mb-2">Based on your resume:</p>
         <ul class="list-disc list-inside">
-          <li v-for="(skill, index) in skills" :key="index">
-            {{ skill }}
-          </li>
+          <li v-for="(skill, index) in skills" :key="index" v-html="(skill)"></li>
         </ul>
-        <template v-if="skillGaps.length > 0">
+        <template v-if="skillGaps.length > 0" class="py-3">
           <p class="mt-2">
             <span class="font-bold">Potential skill gaps in Respect to your goal:</span>
           </p>
           <ul class="list-disc list-inside">
-            <li v-for="(gap, index) in skillGaps" :key="index">
-              {{ gap }}
-            </li>
+            <li v-for="(gap, index) in skillGaps" :key="index" v-html="(gap)"></li>
           </ul>
         </template>
         <template v-else>
           <p class="mt-2">No skill gaps found.</p>
         </template>
 
-        <div v-if="strengths.length > 0" class="mt-4">
+        <div v-if="strengths.length > 0" class="mt-4 py-3">
           <h3 class="font-bold">Your Strengths:</h3>
           <ul class="list-disc list-inside">
-            <li v-for="(str, index) in strengths" :key="index">
-              {{ str }}
-            </li>
+            <li v-for="(str, index) in strengths" :key="index" v-html="(str)"></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold">Your Weaknesses:</h3>
+          <ul class="list-disc list-inside">
+            <li v-for="weak in weaknesses" :key="weak" v-html="(weak)"></li>
           </ul>
         </div>
 
-        <div v-if="developmentAreas.length > 0" class="mt-4">
+        <div v-if="developmentAreas.length > 0" class="mt-4 py-3">
           <h3 class="font-bold">Areas for Development:</h3>
           <ul class="list-disc list-inside">
-            <li v-for="(dev, index) in developmentAreas" :key="index">
-              {{ dev }}
-            </li>
+            <li v-for="(dev, index) in developmentAreas" :key="index" v-html="(dev)"></li>
           </ul>
         </div>
 
-        <div v-if="potentialPaths.length > 0" class="mt-4">
+        <div v-if="potentialPaths.length > 0" class="mt-4 py-3">
           <h3 class="font-bold">Potential Career Paths:</h3>
           <ul class="list-disc list-inside">
-            <li v-for="(path, index) in potentialPaths" :key="index">
-              {{ path }}
-            </li>
+            <li v-for="(path, index) in potentialPaths" :key="index" v-html="(path)"></li>
           </ul>
         </div>
       </div>
@@ -64,6 +60,7 @@
 <script setup>
 import axios from 'axios';
 import { ref, onMounted } from 'vue';
+import MarkdownIt from 'markdown-it';
 
 const API_BASE_URL = import.meta.env.VITE_BASE_URL;
 
@@ -74,6 +71,13 @@ const developmentAreas = ref([]);
 const potentialPaths = ref([]);
 const loading = ref(false);
 const error = ref(null);
+const weaknesses = ref([]);
+
+// Initialize markdown-it
+const md = new MarkdownIt();
+
+// Function to render markdown content
+
 
 const fetchSkillsAssessment = async () => {
   try {
@@ -87,6 +91,7 @@ const fetchSkillsAssessment = async () => {
     strengths.value = geminiSkills?.strengths || [];
     developmentAreas.value = geminiSkills?.development_areas || [];
     potentialPaths.value = geminiSkills?.potential_paths || [];
+    weaknesses.value = geminiSkills?.weaknesses || [];
   } catch (e) {
     error.value = e.response?.data?.message || 'Failed to fetch skills assessment';
     console.error('Error fetching skills assessment:', e);
