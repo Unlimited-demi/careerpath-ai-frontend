@@ -24,14 +24,9 @@ import { ref, onMounted } from 'vue';
 
 const feedbacks = ref([]);
 
-const API_BASE_URL = import.meta.env.VITE_BASE_URL;
-
-
 onMounted(async () => {
   try {
-    const res =  await axios.get(`${API_BASE_URL}/feedback`);
-    
-
+    const res = await axios.get('/api/feedback');
     feedbacks.value = res.data.feedbacks || [];
   } catch (err) {
     console.error('Failed to fetch feedback list:', err);

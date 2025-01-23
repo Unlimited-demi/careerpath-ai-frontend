@@ -1,177 +1,312 @@
 <template>
-  <!-- Main container -->
-  <div class="bg-gray-50 min-h-screen flex flex-col">
-    <!-- Hero Section -->
-    <section class="flex-grow flex flex-col items-center justify-center p-8">
-      <div class="max-w-4xl text-center">
-        <h1 class="text-5xl font-extrabold text-gray-800 mb-6">
-          Feeling Lost in Your Career Transition? We’ve Got Your Back.
-        </h1>
-        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-          Switching to tech or changing careers can feel overwhelming. Endless courses, conflicting advice, and no clear direction leave you stuck. CareerPath AI cuts through the noise. We analyze your skills, pinpoint exactly what you need to learn, and give you a step-by-step roadmap to land your dream job.
+  <div class="min-h-screen bg-gray-50">
+    <!-- Header Banner -->
+    <header class="w-full">
+      <img 
+        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-01-23%20at%2011.05.47_3b81868a.jpg-k66gs7ua2sA43zvM8P3ZkKyWCWnslG.jpeg"
+        alt="GLOPEBA Banner" 
+        class="w-full    object-cover "
+
+      />
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 \ w-full">
+      <!-- About Section -->
+      <section class="mb-12 bg-white rounded-lg shadow-lg p-6 ">
+        <h2 class="text-2xl font-bold text-blue-900 mb-4">About GLOPEBA</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          Global Professionals Education and Business Academy is an international platform initiated and developed to empower, train encourage and recognize practical experience in different areas of specialization.
         </p>
-        <router-link
-          to="/home"
-          class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-bold transition duration-300"
-        >
-          Get Your Personalized Roadmap
-        </router-link>
-      </div>
-    </section>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          True and real education has evolved beyond the building walls called classroom. Therefore the need to encourage those who have keyed in making sure local and global solutions are developed with real practical experience and evidence should be honoured and recognized.
+        </p>
+      </section>
 
-    <!-- Features Section -->
-    <section class="bg-gray-100 py-12">
-      <div class="max-w-5xl mx-auto px-4">
-        <h2 class="text-3xl font-semibold text-center text-gray-800 mb-8">
-          How CareerPath AI Solves Your Biggest Challenges
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- Feature 1 -->
-          <div class="bg-white shadow-lg rounded-lg p-6 text-left">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-            <h3 class="font-bold text-lg text-gray-800 mb-2">No More Guessing</h3>
-            <p class="text-gray-600">
-              Stop wondering where to start. We analyze your skills and show you exactly what you need to learn to reach your career goals.
-            </p>
-          </div>
-          <!-- Feature 2 -->
-          <div class="bg-white shadow-lg rounded-lg p-6 text-left">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11l7-7 7 7M5 19l7-7 7 7" />
-            </svg>
-            <h3 class="font-bold text-lg text-gray-800 mb-2">Clear, Actionable Steps</h3>
-            <p class="text-gray-600">
-              No more aimless searching. We provide a step-by-step plan with specific courses, projects, and resources tailored to your goals.
-            </p>
-          </div>
-          <!-- Feature 3 -->
-          <div class="bg-white shadow-lg rounded-lg p-6 text-left">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-4 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536M3 6h.01M5.636 18.364L9.172 14.828" />
-            </svg>
-            <h3 class="font-bold text-lg text-gray-800 mb-2">Avoid Wasting Time</h3>
-            <p class="text-gray-600">
-              Skip the trial and error. We recommend only the most relevant resources, so you can focus on what matters most.
-            </p>
-          </div>
-          <!-- Feature 4 -->
-          <div class="bg-white shadow-lg rounded-lg p-6 text-left">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-4 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536M3 6h.01M5.636 18.364L9.172 14.828" />
-            </svg>
-            <h3 class="font-bold text-lg text-gray-800 mb-2">Curated Learning Resources</h3>
-            <p class="text-gray-600">
-              We recommend the best courses and resources from platforms like Udemy and YouTube, so you don’t have to sift through endless options.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="py-12">
-      <div class="max-w-5xl mx-auto px-4">
-        <h2 class="text-3xl font-semibold text-center text-gray-800 mb-8">What Our Users Say</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- Testimonial 1 -->
-          <div class="bg-white shadow-md rounded-lg p-6">
-            <p class="text-gray-700 italic">
-              "CareerPath AI helped me realize I needed to develop my DevOps skills further. Thanks to their suggestions, I landed a new role!"
-            </p>
-            <div class="mt-4 text-right">
-              <span class="font-bold text-gray-900">- Alex P.</span>
+      <!-- Registration Form -->
+      <section class="bg-white rounded-lg shadow-lg p-6">
+        <h2 class="text-2xl font-bold text-blue-900 mb-6">Registration Form</h2>
+        <form @submit.prevent="handleSubmit" class="space-y-6">
+          <!-- Personal Information -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Full Name</label>
+              <input 
+                v-model="formData.fullName" 
+                type="text" 
+                required
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Phone Number</label>
+              <input 
+                v-model="formData.phoneNumber" 
+                type="tel" 
+                required
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700">State</label>
+              <select 
+                v-model="formData.state" 
+                required
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              >
+                <option value="">Select State</option>
+                <option v-for="state in nigerianStates" :key="state" :value="state">
+                  {{ state }}
+                </option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700">LGA</label>
+              <input 
+                v-model="formData.lga" 
+                type="text" 
+                required
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              />
             </div>
           </div>
-          <!-- Testimonial 2 -->
-          <div class="bg-white shadow-md rounded-lg p-6">
-            <p class="text-gray-700 italic">
-              "The skill gap analysis was spot on. I followed the recommended courses and saw immediate improvements in my backend development approach."
-            </p>
-            <div class="mt-4 text-right">
-              <span class="font-bold text-gray-900">- Jordan K.</span>
+
+          <!-- Program Selection -->
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Program of Interest</label>
+            <select 
+              v-model="formData.program" 
+              required
+              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            >
+              <option value="">Select Program</option>
+              <option v-for="program in programs" :key="program" :value="program">
+                {{ program }}
+              </option>
+            </select>
+          </div>
+
+          <!-- Sponsor Information -->
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Sponsor's Name</label>
+            <input 
+              v-model="formData.sponsorName" 
+              type="text"
+              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            />
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Sponsor's Phone Number</label>
+            <input 
+              v-model="formData.sponsorPhone" 
+              type="text"
+              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            />
+          </div>
+          <!-- Additional Information -->
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Previous Experience (if any)</label>
+            <textarea 
+              v-model="formData.experience"
+              rows="3"
+              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            ></textarea>
+          </div>
+
+          <!-- Date and Signature -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Date</label>
+              <input 
+                v-model="formData.date" 
+                type="date" 
+                required
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Digital Signature</label>
+              <input 
+                v-model="formData.signature" 
+                type="text" 
+                required
+                placeholder="Type your full name as signature"
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              />
             </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- FAQ Section -->
-    <section class="bg-gray-100 py-12">
-      <div class="max-w-5xl mx-auto px-4">
-        <h2 class="text-3xl font-semibold text-center text-gray-800 mb-8">
-          Still Unsure? Let’s Clear Things Up
-        </h2>
-        <div class="space-y-4">
-          <!-- FAQ 1 -->
-          <details class="bg-white shadow rounded-lg p-4">
-            <summary class="font-bold text-gray-800 cursor-pointer">
-              I’m completely new to tech. Can CareerPath AI help me?
-            </summary>
-            <p class="mt-2 text-gray-700 leading-relaxed">
-              Absolutely! Whether you’re starting from scratch or switching careers, we’ll guide you step-by-step. Just tell us your goal, and we’ll create a personalized plan to get you there.
-            </p>
-          </details>
-          <!-- FAQ 2 -->
-          <details class="bg-white shadow rounded-lg p-4">
-            <summary class="font-bold text-gray-800 cursor-pointer">
-              How is this different from free online resources?
-            </summary>
-            <p class="mt-2 text-gray-700 leading-relaxed">
-              Free resources are great, but they can be overwhelming and hard to navigate. CareerPath AI cuts through the noise by giving you a clear, personalized roadmap with only the most relevant resources.
-            </p>
-          </details>
-          <!-- FAQ 3 -->
-          <details class="bg-white shadow rounded-lg p-4">
-            <summary class="font-bold text-gray-800 cursor-pointer">
-              What if I don’t know what career to aim for?
-            </summary>
-            <p class="mt-2 text-gray-700 leading-relaxed">
-              No problem! We’ll help you explore different career paths based on your skills and interests, so you can choose the one that’s right for you.
-            </p>
-          </details>
-        </div>
-      </div>
-    </section>
+          <!-- <div>
+            
+            <label class="block text-sm font-medium text-gray-700">Payment Approved</label>
+            <input
+              type="checkbox"
+              v-model="formData.approved"
+              class="mt-1"
+            />
+          </div> -->
 
-    <!-- CTA Section -->
-    <section class="py-12">
-      <div class="max-w-xl mx-auto text-center">
-        <h2 class="text-2xl font-semibold text-gray-800 mb-6">
-          Ready to Stop Feeling Overwhelmed?
-        </h2>
-        <p class="text-gray-600 mb-8">
-          Don’t let confusion hold you back. CareerPath AI gives you the clarity and direction you need to take the next step in your career.
-        </p>
-        <router-link
-          to="/home"
-          class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-bold transition duration-300"
-        >
-          Get Your Roadmap Now
-        </router-link>
-      </div>
-    </section>
+          <!-- Submit Button -->
+          <div class="flex justify-center">
+            <button 
+              type="submit"
+              class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            >
+              Submit Registration (₦20,000)
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- <section class="my-8">
+        <h2 class="text-xl font-bold mb-4">Registrations List</h2>
+        <table class="min-w-full">
+          <thead>
+            <tr>
+              <th>Full Name</th>
+              <th>Phone</th>
+              <th>Approved</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              v-for="reg in registrations"
+              :key="reg._id"
+              @click="openModal(reg)"
+              class="cursor-pointer hover:bg-gray-100"
+            >
+              <td>{{ reg.fullName }}</td>
+              <td>{{ reg.phoneNumber }}</td>
+              <td>{{ reg.approved ? 'Yes' : 'No' }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </section> -->
+
+      <!-- Simple Modal -->
+      <!-- <div
+        v-if="showModal"
+        class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50"
+      >
+        <div class="bg-white p-6 rounded">
+          <h3 class="text-lg font-bold mb-4">User Details</h3>
+          <p>Full Name: {{ selectedUser.fullName }}</p>
+          <p>Phone: {{ selectedUser.phoneNumber }}</p>
+          <p>Approved: {{ selectedUser.approved }}</p>
+          <button
+            @click="approvePayment(selectedUser._id)"
+            class="mt-4 px-4 py-2 bg-blue-600 text-white"
+          >
+            Approve Payment
+          </button>
+        </div>
+      </div> -->
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-white mt-auto py-6 shadow-inner">
-      <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
-        <div class="text-sm text-gray-600">
-          © 2024 CareerPath AI. All rights reserved.
-        </div>
-        <div class="flex space-x-4 mt-2 md:mt-0">
-          <!-- Social icons or footer nav can go here -->
-        </div>
+    <!-- <footer class="bg-blue-900 text-white mt-12 py-6">
+      <div class="container mx-auto px-4 text-center">
+        <p class="mb-2">Contact us on WhatsApp: 08030974864</p>
+        <p class="mb-2">Visit: www.glopeba.com.ng</p>
+        <p>© {{ new Date().getFullYear() }} GLOPEBA - Global Professional With Global Solutions</p>
       </div>
-    </footer>
+    </footer> -->
   </div>
 </template>
 
 <script setup>
-// Component logic can go here if needed
+import { ref, onMounted  } from 'vue'
+import axios from 'axios'
+import Toast from 'vue-toastification';
+import 'vue-toastification/dist/index.css';
+import { useRouter } from 'vue-router';
+
+
+const router = useRouter()
+
+const formData = ref({
+  fullName: '',
+  phoneNumber: '',
+  state: '',
+  lga: '',
+  program: '',
+  sponsorName: '',
+  sponsorPhone: '',
+  experience: '',
+  date: '',
+  signature: '',
+  approved: false
+})
+
+const nigerianStates = [
+  'Abia', 'Adamawa', 'Akwa Ibom', 'Anambra', 'Bauchi', 'Bayelsa', 'Benue', 'Borno',
+  'Cross River', 'Delta', 'Ebonyi', 'Edo', 'Ekiti', 'Enugu', 'FCT', 'Gombe', 'Imo',
+  'Jigawa', 'Kaduna', 'Kano', 'Katsina', 'Kebbi', 'Kogi', 'Kwara', 'Lagos', 'Nasarawa',
+  'Niger', 'Ogun', 'Ondo', 'Osun', 'Oyo', 'Plateau', 'Rivers', 'Sokoto', 'Taraba',
+  'Yobe', 'Zamfara'
+]
+
+const programs = [
+  'Professional Diploma Certificate in Practical Automobile Mechanic',
+  'Professional Diploma Certificate in Practical Furniture Services',
+  'Professional Diploma Certificate in Practical Hair Dressing and Stylist Services',
+  'Professional Diploma Certificate in Practical Civil and Building construction services',
+  'Professional Diploma Certificate in Practical Business Marketing and management services',
+  'Professional Diploma Certificate in Practical Safety and Security Services',
+  'Professional Diploma Certificate in Practical Church Ministry and services',
+  'Professional Diploma Certificate in Practical Public Health and caregiver',
+  'Professional Diploma Certificate in Practical Agric Farming and Services',
+  'Professional Diploma Certificate in Practical Computer Services',
+  'Professional Diploma Certificate in Practical Driving Services'
+]
+
+const registrations = ref([])
+const selectedUser = ref(null)
+const showModal = ref(false)
+
+// onMounted(async () => {
+//   const { data } = await axios.get('/list')
+//   registrations.value = data
+// })
+
+const openModal = (user) => {
+  selectedUser.value = user
+  showModal.value = true
+}
+
+const approvePayment = async (id) => {
+  await axios.patch(`/approve/${id}`)
+  // Refresh list
+  const { data } = await axios.get('/list')
+  registrations.value = data
+  showModal.value = false
+}
+
+const handleSubmit = async () => {
+  try {
+    // Simple validation
+    if (!formData.value.fullName || !formData.value.phoneNumber) {
+      Toast.error('Please fill in all required fields.');
+      return;
+    }
+    // Here you would typically send the form data to your backend
+    const response = await axios.post('http://localhost:3000/api/user/register', formData.value)
+    if (response.status ===200) {
+      console.log(response.data)
+      router.push('/registrations')
+    }
+    // On success
+    Toast.success('Registration submitted successfully! We will reach out to you soon.');
+  } catch (error) {
+    Toast.error('Submission failed.');
+  }
+}
 </script>
 
-<style scoped>
+<style>
 /* Add any custom styles here */
+input, select, textarea {
+  @apply border-gray-300;
+}
 </style>
-

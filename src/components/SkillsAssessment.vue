@@ -46,11 +46,13 @@
         </div>
 
         <div v-if="potentialPaths.length > 0" class="mt-4 py-3">
-          <h3 class="font-bold">Potential Career Paths:</h3>
+          <h3 class="font-bold">Potential Career Paths to Consider:</h3>
           <ul class="list-disc list-inside">
             <li v-for="(path, index) in potentialPaths" :key="index" v-html="(path)"></li>
           </ul>
         </div>
+
+       
       </div>
       <div v-else class="text-gray-700">No skills found yet</div>
     </template>
@@ -58,49 +60,14 @@
 </template>
 
 <script setup>
-import axios from 'axios';
 import { ref, onMounted } from 'vue';
-import MarkdownIt from 'markdown-it';
+import { useAssessmentStore } from '@/stores/assessmentStore';
+import { storeToRefs } from 'pinia';
 
-const API_BASE_URL = import.meta.env.VITE_BASE_URL;
+const assessmentStore = useAssessmentStore();
+const { skills, skillGaps, strengths, developmentAreas, potentialPaths, weaknesses, loading, error } = storeToRefs(assessmentStore);
 
-const skills = ref([]);
-const skillGaps = ref([]);
-const strengths = ref([]);
-const developmentAreas = ref([]);
-const potentialPaths = ref([]);
-const loading = ref(false);
-const error = ref(null);
-const weaknesses = ref([]);
-
-// Initialize markdown-it
-const md = new MarkdownIt();
-
-// Function to render markdown content
-
-
-const fetchSkillsAssessment = async () => {
-  try {
-    loading.value = true;
-    error.value = null;
-    const response = await axios.get(`${API_BASE_URL}/assessment/skills`);
-    const geminiSkills = response.data?.geminiSkills;
-
-    skills.value = geminiSkills?.skills || [];
-    skillGaps.value = geminiSkills?.skillGaps || [];
-    strengths.value = geminiSkills?.strengths || [];
-    developmentAreas.value = geminiSkills?.development_areas || [];
-    potentialPaths.value = geminiSkills?.potential_paths || [];
-    weaknesses.value = geminiSkills?.weaknesses || [];
-  } catch (e) {
-    error.value = e.response?.data?.message || 'Failed to fetch skills assessment';
-    console.error('Error fetching skills assessment:', e);
-  } finally {
-    loading.value = false;
-  }
-};
-
-onMounted(() => {
-  fetchSkillsAssessment();
+onMounted(async () => {
+  await assessmentStore.fetchSkillsAssessment();
 });
 </script>

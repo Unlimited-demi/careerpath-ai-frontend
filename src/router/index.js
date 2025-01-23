@@ -3,29 +3,24 @@ import HomeView from '../views/HomeView.vue'
 import ProfileView from '../views/ProfileView.vue'
 import LandingPage from '@/views/LandingPage.vue'
 import FeedbackList from '@/components/FeedbackList.vue'
+import RegistrationsList from '@/views/RegistrationsList.vue'
+import App from '@/App.vue' // <--  Unusual import - App.vue in router?
+
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory("/"),
   routes: [
-    {
-      path: '/home',
-      name: 'home',
-      component: HomeView
-    },
-     {
-      path: '/profile',
-      name: 'profile',
-      component: ProfileView
-    },
+    
     {
       path: "/",
       name: "LandingPage",
       component : LandingPage
     },
+    
     {
-      path :"/feedbacks",
-      "name" : "feedback",
-      component : FeedbackList
-    }
+      path : "/admin/registrations",
+      name : "registrations",
+      component : RegistrationsList
+     }
 
   ]
 })

@@ -1,31 +1,71 @@
 <template>
-  <div class="app-container">
-    <header class="bg-white shadow h-16 flex items-center justify-between px-6">
-      <div class="flex items-center">
-        <a href="/" class="flex items-center">
-          <img src="/favicon.png" alt="CareerPath AI" class="h-8 w-8 mr-2" />
-          <span class="text-2xl font-bold text-gray-800">
-            CareerPath AI
-          </span>
-        </a>
+  <div id="app">
+    <!-- Navigation Bar -->
+    <nav class="bg-blue-900 text-white shadow-lg">
+      <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <router-link to="/" class="text-xl font-bold">GLOPEBA</router-link>
+        <div class="space-x-4">
+          <router-link to="/" class="hover:text-blue-300">Home</router-link>
+          
+          <router-link to="/" class="hover:text-blue-300">Abouts</router-link>
+        </div>
       </div>
-      <nav>
-        <ul class="flex space-x-4">
-          <li>
-            <router-link to="/" class="text-gray-600 hover:text-gray-900 font-medium">
-              <img :src="homeIcon" alt="Home" class="h-6 w-6" />
-            </router-link>
-          </li>
-          <!-- ...add more links if needed... -->
-        </ul>
-      </nav>
-    </header>
+    </nav>
 
-    <router-view></router-view>
+    <!-- Router View -->
+    <div class="container mx-auto px-4 py-8">
+      <router-view></router-view>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white mt-12 py-6">
+      <div class="container mx-auto px-4 text-center">
+        <p class="mb-2">Contact us on WhatsApp: 08030974864</p>
+        <p class="mb-2">Visit: www.glopeba.com.ng</p>
+        <p>© {{ new Date().getFullYear() }} GLOPEBA - Global Professional With Global Solutions</p>
+      </div>
+    </footer>
   </div>
 </template>
 
-<script setup>
-import homeIcon from '@/assets/icons8-home-24.png';
+<script>
+export default {
+  name: 'App'
+}
 </script>
 
+<style>
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navigation Bar Styles */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Container Padding */
+.container {
+  max-width: 1200px;
+}
+
+/* Footer Styles */
+footer {
+  margin-top: auto;
+}
+</style>
